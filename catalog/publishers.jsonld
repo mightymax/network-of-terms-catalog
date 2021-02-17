@@ -60,6 +60,12 @@
       "@type": "Organization",
       "name": "Nederlands Instituut voor Beeld en Geluid",
       "alternateName": "Beeld en Geluid"
+    },
+    {
+      "@id": "https://hetnieuweinstituut.nl",
+      "@type": "Organization",
+      "name": "Het Nieuwe Instituut",
+      "alternateName": "HNI"
     }
   ]
 }
