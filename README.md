@@ -20,8 +20,9 @@ npm add @netwerk-digitaal-erfgoed/network-of-terms-catalog
 
 ### Adding a dataset
 
-* Create a `your-dataset.jsonld` file in the `catalog/` directory and add a description.
-* Create a `your-dataset.rq` in the `queries/` directory to hold the SPARQL query.
+* Create a `your-dataset.jsonld` file in the `catalog/dataset/` directory and add a description.
+* Create a `your-dataset.rq` in the `catalog/queries/` directory to hold the SPARQL query.
+* Add your dataset to the `catalog/publishers.jsonld` file, make sure the `@id` property matches the `@id` property of the `creator` section in `your-dataset.jsonld`
 * Run the tests to make sure your dataset description conforms to the [dataset SHACL](shacl/dataset.jsonld):
   ```
   npm install
@@ -46,11 +47,12 @@ Next, link the dependency:
     cd ../network-of-terms-api
     npm link @netwerk-digitaal-erfgoed/network-of-terms-catalog
     
-After making changes to the catalog, make sure you compile them,
-so your changes are picked up in API:
+Before using the catalog in the API, make sure to compile this repository:
 
     cd network-of-terms-catalog
     npm run compile    
+
+After making changes to the catalog, compiling is not required, just restarting the API service will do.
 
 ### Committing changes
 
